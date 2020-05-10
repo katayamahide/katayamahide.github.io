@@ -1,0 +1,401 @@
+
+.logo{
+	width: 240px;
+}
+
+header{
+	background-color: #efefef;
+}
+
+p {
+  margin: 10px 0px 5px 0px;
+}
+
+.forms{
+	margin-top:20px;
+}
+
+.header_container{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+
+.main_container{
+	display: flex;
+	justify-content: center;
+}
+
+.table{
+	width: 360px;
+}
+
+.nfl-container {
+	max-width: 950px;
+}
+
+.nfl-box {
+	border: 1px solid #f1f1f1;
+	font-family: 'NeueRoman';
+	font-size:16px;
+	line-height:24px;
+    font-weight: normal;
+	color:#000000;
+}
+
+.footer{
+	margin-top: 30px;
+	display: flex;
+	justify-content: center;
+	height:100px;
+	background-color: #efefef;
+	align-items: center;
+	font-size: 14px;
+	color: grey;
+}
+
+.nfl-header {
+	background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 70%,rgba(204,236,252,1) 100%);
+	margin-left: 0rem !important;
+	margin-right: 0rem !important;
+}
+.nfl-header h4 {
+    font-family: 'NeueRoman';
+	font-size:24px;
+	line-height:24px;
+	margin-bottom:14px;
+}
+.nfl-header h1 {
+    font-family:'NeueBlk';
+	font-size:48px;
+	line-height:48px;
+	margin-bottom:5px;
+}
+.nfl-no-pad-lr {
+	padding-left: 0rem !important; padding-right: 0rem !important;
+}
+
+/* Nutrition Label */
+#facts{
+	width:300;
+  margin-top:20px;
+	margin-right: 1rem;
+	z-index:10;
+	background:#0000;
+	border:1px solid #000;
+	padding:20px 0px;
+	font-size:15px;
+	line-height:15px;
+	box-shadow:4px 10px 10px rgba(0,0,0,0.2);
+}
+.on-label-blue #facts {
+    border: 2px solid #000000;
+}
+
+#facts .facts_title {
+	font-family: 'NeueBlk';
+	font-size: 35px;
+	line-height: 16px;
+	color:#231f20;
+	padding-left:10px;
+	padding-right:10px;
+    margin-bottom: 5px;
+}
+
+#facts a {
+    color:#231f20;
+    text-decoration: none;
+	transition:all 0.5s;
+    position: relative;
+    z-index: 10;
+}
+
+#facts a.light {
+	background:#FF0;
+	text-decoration:underline;
+	box-shadow:0 0 0px 2px #FF0;
+}
+
+#facts a:hover {
+    text-decoration: underline;
+}
+
+
+#facts .facts_serving_size {
+	padding-top:4px;
+	padding-bottom:3px;
+	font-size:16px;
+    font-family: 'NeueBlk';
+	line-height:14px;
+	padding-left:10px;
+	padding-right:10px;
+}
+
+#facts .facts_serving_pre {
+	padding-bottom:3px;
+	font-size:14px;
+	line-height:14px;
+	padding-left:10px;
+	padding-right:10px;
+}
+#facts .calories {
+	padding-top:4px;
+	padding-bottom:12px;
+	font-size:1.5em !important;
+    font-family: 'NeueBlk';
+	line-height:1em !important;
+    position:relative;
+}
+#facts .calorieamt {
+	padding-top:4px;
+	padding-bottom:12px;
+	font-size:1.8em !important;
+    font-family: 'NeueBlk';
+	line-height:14px;
+}
+#facts .txt_right {
+    text-align: right;
+}
+#facts strong {
+    font-family: 'NeueBlk';
+}
+#facts .facts_box {
+	border-top:13px solid #231f20;
+	margin-left:10px;
+	margin-right:10px;
+}
+
+#facts .facts_box.thin {
+	border-width:5px;
+}
+
+#facts .fact_row {
+	padding-bottom:2px;
+	padding-top:5px;
+	font-size:14px;
+	line-height:14px;
+	border-bottom:1px solid #838181;
+	position:relative;
+}
+#facts .fact_row_norule {
+	padding-bottom:2px;
+	padding-top:5px;
+	font-size:14px;
+	line-height:14px;
+	position:relative;
+}
+
+#facts .fact_row.pinkbg { background:#feeab8; padding-left: 10px; padding-right: 10px; margin-left: -10px; margin-right: -10px;}
+#facts .fact_row.bluebg { background:#ebf3c0; padding-left: 10px; padding-right: 10px; margin-left: -10px; margin-right: -10px;}
+
+#facts .fact_row.pinkbg.sub {padding-left: 28px;}
+#facts .fact_row.bluebg.sub {padding-left: 28px;}
+
+
+#facts .fact_row.sub {
+	padding-left:18px;
+}
+#facts .fact_row.sublv2 {
+	margin-left:18px;
+}
+#facts .fact_row.sublv3 {
+	padding-left:36px;
+}
+
+
+#b_box #b_content #facts .plus_in_label,
+#b_box #b_content #facts .minus_in_label {
+    width: 40px;
+    position: absolute;
+    top: 23px;
+    left: -33px;
+    z-index: 2;
+    display: none;
+}
+
+#b_box #b_content #facts .fact_row.pinkbg.withicon:before {
+    content:"\0020";
+    background: #fab2dc;
+    width: 35px;
+    height: 100%;
+    border-top:1px solid #fab2dc;
+    position: absolute;
+    top:0;
+    left:-39px;
+    z-index: 1;
+    display: none;
+}
+
+#b_box #b_content #facts .fact_row.bluebg.withicon:before {
+    content:"\0020";
+    background: #b2e7fa;
+    width: 35px;
+    height: 100%;
+    border-top:1px solid #b2e7fa;
+    position: absolute;
+    top:0;
+    left:-39px;
+    z-index: 1;
+    display: none;
+}
+
+#b_box #b_content #facts .fact_row.pinkbg.withicon.withicon_min:before,
+#b_box #b_content #facts .fact_row.bluebg.withicon.withicon_min:before {
+    width: 19px;
+    left:-23px;
+    display: none;
+}
+
+#b_box #b_content #facts .plus_in_label_min,
+#b_box #b_content #facts .minus_in_label_min {
+    width: 20px;
+    position: absolute;
+    top: 2px;
+    left: -16px;
+    z-index: 2;
+    display: none;
+}
+
+#facts .fact_row small {
+	font-size:12px;
+	line-height:12px;
+	font-family: 'NeueBl';
+	color:#000;
+}
+
+#facts .fact_row div {
+	float:right;
+}
+
+#facts strong {
+	color:#000;
+}
+
+#facts .facts_descr {
+	padding-left:20px;
+	padding-right:10px;
+	font-size:11px;
+	line-height:12px;
+	margin:8px 0 8px;
+	position:relative;
+    color:#000;
+}
+
+#facts .facts_descr:before {
+	content:'*';
+	font-size:12px;
+	position:absolute;
+	top:2px;
+	left:12px;
+}
+
+#facts .facts_table {
+	margin-left:10px;
+	margin-right:10px;
+    color:#000;
+}
+
+#facts table {
+	width:100%;
+}
+
+#facts table th,
+#facts table td {
+	font-size:11px;
+	line-height:11px;
+}
+
+#facts table th {
+    text-align: left;
+	padding-bottom:1px;
+}
+
+#facts table td {
+	padding:3px 0 0px;
+	vertical-align:bottom;
+}
+
+#facts table tbody {
+	border-top:1px solid #4c4849;
+}
+
+
+@font-face {
+    font-family: 'Museo';
+    src: url('fonts/2CA46C_0_0.eot');
+    src: url('fonts/2CA46C_0_0.eot?#iefix') format('embedded-opentype'),
+    url('fonts/2CA46C_0_0.woff2') format('woff2'),
+    url('fonts/2CA46C_0_0.woff') format('woff'),
+    url('fonts/2CA46C_0_0.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'NeueRoman';
+    src: url('fonts/2CA3C4_0_0.eot');
+    src:
+    url('fonts/HelveticaNeueLTStd-Roman.otf'),
+    url('fonts/2CA3C4_0_0.eot?#iefix') format('embedded-opentype'),
+    url('fonts/2CA3C4_0_0.woff2') format('woff2'),
+    url('fonts/2CA3C4_0_0.woff') format('woff'),
+    url('fonts/2CA3C4_0_0.ttf') format('truetype');
+}
+
+
+@font-face {
+    font-family: 'NeueBl';
+    src: url('fonts/2CA3C4_1_0.eot');
+    src:
+    url('fonts/HelveticaNeueLTStd-Bd.otf'),
+    url('fonts/2CA3C4_1_0.eot?#iefix') format('embedded-opentype'),
+    url('fonts/2CA3C4_1_0.woff2') format('woff2'),
+    url('fonts/2CA3C4_1_0.woff') format('woff'),
+    url('fonts/2CA3C4_1_0.ttf') format('truetype');
+}
+
+
+@font-face {
+    font-family: 'NeueBlk';
+    src: url('fonts/2CA3C4_2_0.eot');
+    src:
+    url('fonts/HelveticaNeueLTStd-Blk.otf'),
+    url('fonts/2CA3C4_2_0.eot?#iefix') format('embedded-opentype'),
+    url('fonts/2CA3C4_2_0.woff2') format('woff2'),
+    url('fonts/2CA3C4_2_0.woff') format('woff'),
+    url('fonts/2CA3C4_2_0.ttf') format('truetype');
+}
+
+
+@font-face {
+    font-family: 'NeueCn';
+    src: url('fonts/2CA3C4_3_0.eot');
+    src:
+    url('fonts/HelveticaNeueLTStd-Cn.otf'),
+    url('fonts/2CA3C4_3_0.eot?#iefix') format('embedded-opentype'),
+    url('fonts/2CA3C4_3_0.woff2') format('woff2'),
+    url('fonts/2CA3C4_3_0.woff') format('woff'),
+    url('fonts/2CA3C4_3_0.ttf') format('truetype');
+}
+
+
+@font-face {
+    font-family: 'HelveticaNeueLTStd-BdIt';
+    src: url('fonts/2CA3C4_4_0.eot');
+    src:
+    url('fonts/HelveticaNeueLTStd-BdIt.otf'),
+    url('fonts/2CA3C4_4_0.eot?#iefix') format('embedded-opentype'),
+    url('fonts/2CA3C4_4_0.woff2') format('woff2'),
+    url('fonts/2CA3C4_4_0.woff') format('woff'),
+    url('fonts/2CA3C4_4_0.ttf') format('truetype');
+}
+
+
+@font-face {
+    font-family: 'HelveticaNeueLTStd-It';
+    src: url('fonts/2CA3C4_5_0.eot');
+    src: url('fonts/2CA3C4_5_0.eot?#iefix') format('embedded-opentype'),
+    url('fonts/2CA3C4_5_0.woff2') format('woff2'),
+    url('fonts/2CA3C4_5_0.woff') format('woff'),
+    url('fonts/2CA3C4_5_0.ttf') format('truetype');
+}

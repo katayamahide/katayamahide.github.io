@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>ぽちっと栄養表示</title>
+  <link rel="icon" href="favicon.ico">
+  <meta name="description" content="海外栄養表示の自動作成ツールです。最新の米国FDA栄養表示ルールに対応。">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header>
+    <div class="header_container">
+      <div class="logo">
+        <a href="./index4.html">
+          <img src="logo.png" class="logo" alt="ぽちっと栄養表示は海外栄養表示の自動作成サービスです">
+        </a>
+      </div>
+      <div class="info">
+        <p>米国FDA対応の栄養表示の自動作成ツール</p>
+      </div>
+    </div>
+  </header>
+<main>
+  <div class="main_container">
+    <div class = "table">
+      <div id="facts">
+        <div class="facts_title">Nutrition Facts</div>
+        <div class="facts_serving_pre"><span id="perContainer1"></span> servings per container</div>
+        <div class="facts_serving_size">Serving size <span id="servingText1"></span> (<span id="servingSize1"></span>g)</div>
+        <div class="facts_box">
+          <div class="fact_row_norule"><small>Amount Per Serving</small></div>
+          <div class="fact_row calories">
+            <div class="calorieamt"><span id="calories1"></span></div><strong>Calories</strong>
+          </div>
+        </div>
+        <!--.facts_box-->
+        <div class="facts_box thin">
+          <div class="fact_row txt_right"><strong><small>% Daily Value*</small></strong></div>
+          <div class="fact_row">
+            <div><strong><span id="totalFatDV"></span>%</strong></div><strong>Total Fat </strong><span id="totalFat1"></span>g
+          </div>
+          <div class="fact_row sub">
+            <div><strong><span id="saturatedFatDV"></span>%</strong></div>Saturated Fat <span id="saturatedFat1"></span>g
+          </div>
+          <div class="fact_row sub"><em>Trans</em> Fat <span id="transFat1"></span>g</div>
+          <div class="fact_row">
+            <div><strong><span id="cholesterolDV"></span>%</strong></div><strong>Cholesterol</strong> <span id="cholesterol1"></span>mg
+          </div>
+          <div class="fact_row">
+            <div><strong><span id="sodiumDV"></span>%</strong></div><strong>Sodium</strong> <span id="sodium1"></span>mg
+          </div>
+          <div class="fact_row">
+            <div><strong><span id="totalCarbonhydrateDV"></span>%</strong></div><strong>Total Carbohydrate</strong> <span id="totalCarbonhydrate1"></span>g
+          </div>
+          <div class="fact_row sub">
+            <div><strong><span id="dietaryFiberDV"></span>%</strong></div>Dietary Fiber <span id="dietaryFiber1"></span>g
+          </div>
+          <div class="fact_row sublv2">Total Sugars <span id="totalSugars1"></span>g</div>
+          <div class="fact_row sublv3">
+            <div><strong><span id="addedSugarsDV"></span>%</strong></div>Includes <span id="addedSugars1"></span>g Added Sugars
+          </div>
+          <div class="fact_row"><strong>Protein</strong> <span id="protein1"></span>g</div>
+        </div>
+        <!--.facts_box-->
+        <div class="facts_box">
+          <div class="fact_row">
+            <div><span id="vitaminDDV"></span>%</div>Vitamin D <span id="vitaminD1"></span>mcg
+          </div>
+          <div class="fact_row">
+            <div><span id="calciumDV"></span>%</div>Calcium <span id="calcium1"></span>mg
+          </div>
+          <div class="fact_row">
+            <div><span id="ironDV"></span>%</div>Iron <span id="iron1"></span>mg
+          </div>
+          <div class="fact_row">
+            <div><span id="potassiumDV"></span>%</div>Potassium <span id="potassium1"></span>mg
+          </div>
+        </div>
+        <!--.facts_box-->
+        <div class="facts_descr">
+          The % Daily Value (DV) tells you how much a nutrient in a serving of food contributes to a daily diet. 2,000 calories a day is used for general nutrition advice.
+        </div>
+
+
+      </div>
+      <!--#facts-->
+    </div>
+  <div class="forms">
+    <form name="form">
+      <p>パッケージ当たり食数 Servings per container <input type="text" name="servingsPerContainer" value="" size="5" maxlength="3" onKeyUp="perContainer()"><span id="perContainer2"></span></p>
+      <p>1食分の量(g以外) (Optional) Serving size(Other than"g") <input type="text" name="servingText" value="" size="5" maxlength="35" onKeyUp="servingTextValue()"><span id="servingText2"></span></p>
+      <p>1食分の量(g) Serving size(g) <input type="text" name="servingSize" value="" size="5" maxlength="5" onKeyUp="servingSizeValue()"><span id="servingSize2"></span>g</p>
+      <p>熱量 Calories <input type="text" name="calories" value="" size="5" maxlength="5" onKeyUp="caloriesValue()"><span id="calories2"></span></p>
+      <p>総脂質 Total Fat <input type="text" name="totalFat" value="" size="5" maxlength="5" onKeyUp="totalFatValue()"><span id="totalFat2"></span></p>
+      <p>飽和脂肪酸 saturated Fat <input type="text" name="saturatedFat" value="" size="5" maxlength="5" onKeyUp="saturatedFatValue()"><span id="saturatedFat2"></span></p>
+      <p>トランス脂肪酸 Trans Fat <input type="text" name="transFat" value="" size="5" maxlength="5" onKeyUp="transFatValue()"><span id="transFat2"></span></p>
+      <p>コレステロール Cholesterol <input type="text" name="cholesterol" value="" size="5" maxlength="5" onKeyUp="cholesterolValue()"><span id="cholesterol2"></span>mg</p>
+      <p>ナトリウム Sodium <input type="text" name="sodium" value="" size="5" maxlength="5" onKeyUp="sodiumValue()"><span id="sodium2"></span></p>
+      <p>総炭水化物 Total Carbonhydrate <input type="text" name="totalCarbonhydrate" value="" size="5" maxlength="5" onKeyUp="totalCarbonhydrateValue()"><span id="totalCarbonhydrate2"></span></p>
+      <p>食物繊維 Dietary Fiber <input type="text" name="dietaryFiber" value="" size="5" maxlength="5" onKeyUp="dietaryFiberValue()"><span id="dietaryFiber2"></span></p>
+      <p>総糖類 Total Sugars <input type="text" name="totalSugars" value="" size="5" maxlength="5" onKeyUp="totalSugarsValue()"><span id="totalSugars2"></span></p>
+      <p>添加糖類 Added Sugars <input type="text" name="addedSugars" value="" size="5" maxlength="5" onKeyUp="addedSugarsValue()"><span id="addedSugars2"></span></p>
+      <p>タンパク質 Protein <input type="text" name="protein" value="" size="5" maxlength="5" onKeyUp="proteinValue()"><span id="protein2"></span></p>
+      <p>ビタミンD Vitamin D <input type="text" name="vitaminD" value="" size="5" maxlength="5" onKeyUp="vitaminDValue()"><span id="vitaminD2"></span></p>
+      <p>カルシウム Calcium <input type="text" name="calcium" value="" size="5" maxlength="5" onKeyUp="calciumValue()"><span id="calcium2"></span></p>
+      <p>鉄分 Iron <input type="text" name="iron" value="" size="5" maxlength="5" onKeyUp="ironValue()"><span id="iron2"></span></p>
+      <p>カリウム Potassium <input type="text" name="potassium" value="" size="5" maxlength="5" onKeyUp="potassiumValue()"><span id="potassium2"></span></p>
+    </form>
+
+    <input type="text" name="totalFat" value="" size="5" maxlength="5">
+
+    <input type="button" value="ボタン" onclick="clickBtn1()" />
+    <input type="button" value="クリア" onclick="clickBtn2()" />
+  </div>
+</div>
+</main>
+
+
+  <script>
+    // const itemsJp = ["熱量", "総脂質", "飽和脂肪酸", "トランス脂肪酸", "コレステロール", "ナトリウム", "総炭水化物", "食物繊維", "総糖類", "添加糖類", "タンパク質", "ビタミンD", "カルシウム", "鉄分", "カリウム"];
+    // const itemsEn = ["Calories", "Total Fat", "Saturated Fat", "Trans Fat", "Cholesterol", "Sodium", "Total Carbonhydrate", "Dietary Fiber", "Total Sugars", "Added Sugars", "Protein", "Vitamin D", "Calcium", "Iron", "Potassium"];
+    // const itemsJpNumber = itemsJp.length;
+    // const item = document.getElementsByClassName("item");
+    // for( let i = 0; i < itemsJpNumber; i++){
+    //   item[i].innerHTML = itemsJp[i];
+    // }
+
+
+    // パッケージ当たり食数 Servings per container
+    function perContainer() {
+
+      // 値を取得
+      let valuePerContainer = document.form.servingsPerContainer.value;
+      // 栄養表示に出力
+      document.getElementById("perContainer1").textContent = valuePerContainer;
+      // フォーム横に出力
+      document.getElementById("perContainer2").textContent = valuePerContainer;
+    }
+
+    // サービングサイズテキスト Servings size text
+    function servingTextValue() {
+
+      // 値を取得
+      let valueServingText = document.form.servingText.value;
+      // 栄養表示に出力
+      document.getElementById("servingText1").textContent = valueServingText;
+      // フォーム横に出力
+      document.getElementById("servingText2").textContent = valueServingText;
+    }
+
+    // サービングサイズ Servings size
+    function servingSizeValue() {
+
+      // 値を取得
+      let valueServingSize = document.form.servingSize.value;
+      // 栄養表示に出力
+      document.getElementById("servingSize1").textContent = valueServingSize;
+      // フォーム横に出力
+      document.getElementById("servingSize2").textContent = valueServingSize;
+    }
+
+      // ■熱量 Calories
+    function caloriesValue() {
+
+      // 値を取得
+      let valueCalories = document.form.calories.value;
+      if (valueCalories <= 50) {
+        // 5刻みで丸める
+        valueCalories = Math.round(valueCalories*2/10)*10/2;
+      }else{
+        // 10刻みで丸める
+        valueCalories = Math.round(valueCalories/10)*10;
+      }
+      // 栄養表示に出力
+      document.getElementById("calories1").textContent = valueCalories;
+      // フォーム横に出力
+      document.getElementById("calories2").textContent = valueCalories;
+    }
+
+      // ■総脂質 Total Fat
+      function totalFatValue() {
+      // 値を取得
+      let valueTotalFat = document.form.totalFat.value;
+      // %DVを計算 DV=78
+      let valueTotalFatDV = valueTotalFat/78*100;
+      // %DVを四捨五入
+      valueTotalFatDV = Math.round(valueTotalFatDV);
+
+      if (valueTotalFat <= 5) {
+        // 0.5刻みで丸める
+        valueTotalFat = Math.round(valueTotalFat*2)/2;
+      }else{
+        // 1刻みで丸める
+        valueTotalFat = Math.round(valueTotalFat);
+      }
+      // 栄養表示に出力
+      document.getElementById("totalFat1").textContent = valueTotalFat;
+      // フォーム横に出力
+      document.getElementById("totalFat2").textContent = valueTotalFat;
+      // %DVに出力
+      document.getElementById("totalFatDV").textContent = valueTotalFatDV;
+      }
+
+      // ■飽和脂肪酸 Saturated Fat
+      function saturatedFatValue() {
+        // 値を取得
+        let valueSaturatedFat = document.form.saturatedFat.value;
+        // %DVを計算 DV=20
+        let valueSaturatedFatDV = valueSaturatedFat/20*100;
+        // %DVを四捨五入
+        valueSaturatedFatDV = Math.round(valueSaturatedFatDV);
+
+        if (valueSaturatedFat <= 5) {
+          // 0.5刻みで丸める
+          valueSaturatedFat = Math.round(valueSaturatedFat*2)/2;
+        }else{
+          // 1刻みで丸める
+          valueSaturatedFat = Math.round(valueSaturatedFat);
+        }
+        // 栄養表示に出力
+        document.getElementById("saturatedFat1").textContent = valueSaturatedFat;
+        // フォーム横に出力
+        document.getElementById("saturatedFat2").textContent = valueSaturatedFat;
+        // %DVに出力
+        document.getElementById("saturatedFatDV").textContent = valueSaturatedFatDV;
+        }
+
+      // ■ トランス脂肪酸 Trans Fat
+      function transFatValue() {
+        // 値を取得
+        let valueTransFat = document.form.transFat.value;
+
+        if (valueTransFat <= 5) {
+          // 0.5刻みで丸める
+          valueTransFat = Math.round(valueTransFat*2)/2;
+        }else{
+          // 1刻みで丸める
+          valueTransFat = Math.round(valueTransFat);
+        }
+        // 栄養表示に出力
+        document.getElementById("transFat1").textContent = valueTransFat;
+        // フォーム横に出力
+        document.getElementById("transFat2").textContent = valueTransFat;
+      }
+
+      // ■ コレステロール Cholesterol
+      function cholesterolValue() {
+        // 値を取得
+        let valueCholesterol = document.form.cholesterol.value;
+        // %DVを計算 DV=300
+        let valueCholesterolDV = valueCholesterol/300*100;
+        // %DVを四捨五入
+        valueCholesterolDV = Math.round(valueCholesterolDV);
+
+
+        if (valueCholesterol < 5) {
+          // 5mg未満
+          valueCholesterol = "less than 5";
+        }else{
+          // 5刻みで丸める
+          valueCholesterol = Math.round(valueCholesterol*2/10)*10/2;
+        }
+        // 栄養表示に出力
+        document.getElementById("cholesterol1").textContent = valueCholesterol;
+        // フォーム横に出力
+        document.getElementById("cholesterol2").textContent = valueCholesterol;
+        // %DVに出力
+        document.getElementById("cholesterolDV").textContent = valueCholesterolDV;
+      }
+
+      // ■ ナトリウム sodium
+      function sodiumValue() {
+        // 値を取得
+        let valueSodium = document.form.sodium.value;
+        // %DVを計算 DV=2300
+        let valueSodiumDV = valueSodium/2300*100;
+        // %DVを四捨五入
+        valueSodiumDV = Math.round(valueSodiumDV);
+
+        if (valueSodium <= 140) {
+          // 5刻みで丸める
+          valueSodium = Math.round(valueSodium*2/10)*10/2;
+        }else{
+          // 10刻みで丸める
+          valueSodium = Math.round(valueSodium/10)*10;
+        }
+        // 栄養表示に出力
+        document.getElementById("sodium1").textContent = valueSodium;
+        // フォーム横に出力
+        document.getElementById("sodium2").textContent = valueSodium;
+        // %DVに出力
+        document.getElementById("sodiumDV").textContent = valueSodiumDV;
+      }
+
+      // ■ 総炭水化物 Total Carbonhydrate
+      function totalCarbonhydrateValue() {
+        // 値を取得
+        let valueTotalCarbonhydrate = document.form.totalCarbonhydrate.value;
+        // %DVを計算 DV=275
+        let valueTotalCarbonhydrateDV = valueTotalCarbonhydrate/275*100;
+        // %DVを四捨五入
+        valueTotalCarbonhydrateDV = Math.round(valueTotalCarbonhydrateDV);
+
+        if (valueTotalCarbonhydrate < 1) {
+          // 1未満
+          valueTotalCarbonhydrate = "less than 1";
+        }else{
+          // 1刻みで丸める
+          valueTotalCarbonhydrate = Math.round(valueTotalCarbonhydrate);
+        }
+        // 栄養表示に出力
+        document.getElementById("totalCarbonhydrate1").textContent = valueTotalCarbonhydrate;
+        // フォーム横に出力
+        document.getElementById("totalCarbonhydrate2").textContent = valueTotalCarbonhydrate;
+        // %DVに出力
+        document.getElementById("totalCarbonhydrateDV").textContent = valueTotalCarbonhydrateDV;
+      }
+
+      // ■ 食物繊維 Dietary fiber
+      function dietaryFiberValue() {
+        // 値を取得
+        let valueDietaryFiber = document.form.dietaryFiber.value;
+        // %DVを計算 DV=28
+        let valueDietaryFiberDV = valueDietaryFiber/28*100;
+        // %DVを四捨五入
+        valueDietaryFiberDV = Math.round(valueDietaryFiberDV);
+
+        if (valueDietaryFiber < 1) {
+          // 1未満
+          valueDietaryFiber = "less than 1";
+        }else{
+          // 1刻みで丸める
+          valueDietaryFiber = Math.round(valueDietaryFiber);
+        }
+        // 栄養表示に出力
+        document.getElementById("dietaryFiber1").textContent = valueDietaryFiber;
+        // フォーム横に出力
+        document.getElementById("dietaryFiber2").textContent = valueDietaryFiber;
+        // %DVに出力
+        document.getElementById("dietaryFiberDV").textContent = valueDietaryFiberDV;
+      }
+
+      // ■ 総糖類 Total Sugars
+      function totalSugarsValue() {
+        // 値を取得
+        let valueTotalSugars = document.form.totalSugars.value;
+
+        if (valueTotalSugars < 1) {
+          // 1未満
+          valueTotalSugars = "less than 1";
+        }else{
+          // 1刻みで丸める
+          valueTotalSugars = Math.round(valueTotalSugars);
+        }
+        // 栄養表示に出力
+        document.getElementById("totalSugars1").textContent = valueTotalSugars;
+        // フォーム横に出力
+        document.getElementById("totalSugars2").textContent = valueTotalSugars;
+      }
+
+      // ■ 添加糖類 Total Sugars
+      function addedSugarsValue() {
+        // 値を取得
+        let valueAddedSugars = document.form.addedSugars.value;
+        // %DVを計算 DV=50
+        let valueAddedSugarsDV = valueAddedSugars/50*100;
+        // %DVを四捨五入
+        valueAddedSugarsDV = Math.round(valueAddedSugarsDV);
+
+        // 1刻みで丸める
+        valueAddedSugars = Math.round(valueAddedSugars);
+
+        // 栄養表示に出力
+        document.getElementById("addedSugars1").textContent = valueAddedSugars;
+        // フォーム横に出力
+        document.getElementById("addedSugars2").textContent = valueAddedSugars;
+        // %DVに出力
+        document.getElementById("addedSugarsDV").textContent = valueAddedSugarsDV;
+      }
+
+      // ■ たんぱく質 Protein
+      function proteinValue() {
+        // 値を取得
+        let valueProtein = document.form.protein.value;
+
+        if (valueProtein < 1) {
+          // 1未満
+          valueProtein = "less than 1";
+        }else{
+          // 1刻みで丸める
+        valueProtein = Math.round(valueProtein);
+      }
+        // 栄養表示に出力
+        document.getElementById("protein1").textContent = valueProtein;
+        // フォーム横に出力
+        document.getElementById("protein2").textContent = valueProtein;
+      }
+
+      // ■ たんぱく質 Protein
+      function proteinValue() {
+        // 値を取得
+        let valueProtein = document.form.protein.value;
+
+        if (valueProtein < 1) {
+          // 1未満
+          valueProtein = "less than 1";
+        }else{
+          // 1刻みで丸める
+        valueProtein = Math.round(valueProtein);
+      }
+        // 栄養表示に出力
+        document.getElementById("protein1").textContent = valueProtein;
+        // フォーム横に出力
+        document.getElementById("protein2").textContent = valueProtein;
+      }
+
+      // ■ ビタミンD vitaminD
+      function vitaminDValue() {
+        // 値を取得
+        let valueVitaminD = document.form.vitaminD.value;
+        // %DVを計算 DV=20
+        let valueVitaminDDV = valueVitaminD/20*100;
+        if (valueVitaminDDV <2 ) {
+          valueVitaminDDV = "less than 2";
+        }else if (valueVitaminDDV <= 10) {
+          //2刻みで丸める
+          valueVitaminDDV = Math.round(valueVitaminDDV/2)*2;
+        }else if (valueVitaminDDV <=50) {
+          //5刻みで丸める
+          valueVitaminDDV = Math.round(valueVitaminDDV*2/10)*10/2;
+        }else {
+          valueVitaminDDV = Math.round(valueVitaminDDV/10)*10;
+        }
+        // 0.1刻みで丸める
+        valueVitaminD = Math.round(valueVitaminD*10)/10;
+
+        // 栄養表示に出力
+        document.getElementById("vitaminD1").textContent = valueVitaminD;
+        // フォーム横に出力
+        document.getElementById("vitaminD2").textContent = valueVitaminD;
+        // %DVに出力
+        document.getElementById("vitaminDDV").textContent = valueVitaminDDV;
+      }
+
+      // ■ カルシウム Calcium
+      function calciumValue() {
+        // 値を取得
+        let valueCalcium = document.form.calcium.value;
+        // %DVを計算 DV=1300
+        let valueCalciumDV = valueCalcium/1300*100;
+        if (valueCalciumDV <2 ) {
+          valueCalciumDV = "less than 2";
+        }else if (valueCalciumDV <= 10) {
+          //2刻みで丸める
+          valueCalciumDV = Math.round(valueCalciumDV/2)*2;
+        }else if (valueCalciumDV <=50) {
+          //5刻みで丸める
+          valueCalciumDV = Math.round(valueCalciumDV*2/10)*10/2;
+        }else {
+          valueCalciumDV = Math.round(valueCalciumDV/10)*10;
+        }
+
+          // 10刻みで丸める
+        valueCalcium = Math.round(valueCalcium/10)*10;
+
+        // 栄養表示に出力
+        document.getElementById("calcium1").textContent = valueCalcium;
+        // フォーム横に出力
+        document.getElementById("calcium2").textContent = valueCalcium;
+        // %DVに出力
+        document.getElementById("calciumDV").textContent = valueCalciumDV;
+      }
+
+      // ■ 鉄分 Iron
+      function ironValue() {
+        // 値を取得
+        let valueIron = document.form.iron.value;
+        // %DVを計算 DV=18
+        let valueIronDV = valueIron/18*100;
+        if (valueIronDV <2 ) {
+          valueIronDV = "less than 2";
+        }else if (valueIronDV <= 10) {
+          //2刻みで丸める
+          valueIronDV = Math.round(valueIronDV/2)*2;
+        }else if (valueIronDV <=50) {
+          //5刻みで丸める
+          valueIronDV = Math.round(valueIronDV*2/10)*10/2;
+        }else {
+          valueIronDV = Math.round(valueIronDV/10)*10;
+        }
+
+          // 0.1刻みで丸める
+        valueIron = Math.round(valueIron*10)/10;
+
+        // 栄養表示に出力
+        document.getElementById("iron1").textContent = valueIron;
+        // フォーム横に出力
+        document.getElementById("iron2").textContent = valueIron;
+        // %DVに出力
+        document.getElementById("ironDV").textContent = valueIronDV;
+      }
+
+      // ■ カリウム Potassium
+      function potassiumValue() {
+        // 値を取得
+        let valuePotassium = document.form.potassium.value;
+        // %DVを計算 DV=4700
+        let valuePotassiumDV = valuePotassium/4700*100;
+        if (valuePotassiumDV <2 ) {
+          valuePotassiumDV = "less than 2";
+        }else if (valuePotassiumDV <= 10) {
+          //2刻みで丸める
+          valuePotassiumDV = Math.round(valuePotassiumDV/2)*2;
+        }else if (valuePotassiumDV <=50) {
+          //5刻みで丸める
+          valuePotassiumDV = Math.round(valuePotassiumDV*2/10)*10/2;
+        }else {
+          valuePotassiumDV = Math.round(valuePotassiumDV/10)*10;
+        }
+
+          // 10刻みで丸める
+        valuePotassium = Math.round(valuePotassium/10)*10;
+
+        // 栄養表示に出力
+        document.getElementById("potassium1").textContent = valuePotassium;
+        // フォーム横に出力
+        document.getElementById("potassium2").textContent = valuePotassium;
+        // %DVに出力
+        document.getElementById("potassiumDV").textContent = valuePotassiumDV;
+      }
+
+
+
+  </script>
+  <footer>
+    <div class="footer">
+      <p>(c) DGT group</p>
+    </div>
+  </footer>
+</body>
+
+</html>
