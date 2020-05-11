@@ -22,8 +22,9 @@
     </div>
   </header>
 <main>
+
   <div class="main_container">
-    <div class = "table">
+    <div class = "table" id="capture">
       <div id="facts">
         <div class="facts_title">Nutrition Facts</div>
         <div class="facts_serving_pre"><span id="perContainer1"></span> servings per container</div>
@@ -81,11 +82,10 @@
         <div class="facts_descr">
           The % Daily Value (DV) tells you how much a nutrient in a serving of food contributes to a daily diet. 2,000 calories a day is used for general nutrition advice.
         </div>
-
-
       </div>
       <!--#facts-->
     </div>
+
   <div class="forms">
     <form name="form">
       <p>パッケージ当たり食数 Servings per container <input type="text" name="servingsPerContainer" value="" size="5" maxlength="3" onKeyUp="perContainer()"><span id="perContainer2"></span></p>
@@ -106,16 +106,15 @@
       <p>カルシウム Calcium <input type="text" name="calcium" value="" size="5" maxlength="5" onKeyUp="calciumValue()"><span id="calcium2"></span></p>
       <p>鉄分 Iron <input type="text" name="iron" value="" size="5" maxlength="5" onKeyUp="ironValue()"><span id="iron2"></span></p>
       <p>カリウム Potassium <input type="text" name="potassium" value="" size="5" maxlength="5" onKeyUp="potassiumValue()"><span id="potassium2"></span></p>
+      <input type="button" value="ボタン" onclick="clickBtn1()" />
+      <input type="button" value="クリア" onclick="clickBtn2()" />
     </form>
-
-    <input type="text" name="totalFat" value="" size="5" maxlength="5">
-
-    <input type="button" value="ボタン" onclick="clickBtn1()" />
-    <input type="button" value="クリア" onclick="clickBtn2()" />
   </div>
 </div>
 </main>
 
+
+</script>
 
   <script>
     // const itemsJp = ["熱量", "総脂質", "飽和脂肪酸", "トランス脂肪酸", "コレステロール", "ナトリウム", "総炭水化物", "食物繊維", "総糖類", "添加糖類", "タンパク質", "ビタミンD", "カルシウム", "鉄分", "カリウム"];
@@ -533,11 +532,17 @@
 
 
   </script>
-  <footer>
-    <div class="footer">
-      <p>(c) DGT group</p>
-    </div>
-  </footer>
+  <script src = "html2canvas.js"></script>
+  <script type= "text/javascript">
+  function clickBtn1(){
+  html2canvas(document.getElementById("capture"),{scale:2}).then(canvas => {
+    document.body.append(canvas)
+  });
+  }
+
+
+  </script>
+
 </body>
 
 </html>
