@@ -29,21 +29,18 @@ p {
 }
 
 .table{
-	width: 360px;
+	width: 342px;
+	height: 520px;
+	margin-top:20px;
+	margin-right: 20px;
+	background:#0000;
+	border:1px solid #000;
+	padding:20px 0px;
+	font-size:15px;
+	line-height:15px;
+	box-shadow:4px 10px 10px rgba(0,0,0,0.2);
 }
 
-.nfl-container {
-	max-width: 950px;
-}
-
-.nfl-box {
-	border: 1px solid #f1f1f1;
-	font-family: 'NeueRoman';
-	font-size:16px;
-	line-height:24px;
-    font-weight: normal;
-	color:#000000;
-}
 
 .footer{
 	margin-top: 30px;
@@ -56,45 +53,9 @@ p {
 	color: grey;
 }
 
-.nfl-header {
-	background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 70%,rgba(204,236,252,1) 100%);
-	margin-left: 0rem !important;
-	margin-right: 0rem !important;
-}
-.nfl-header h4 {
-    font-family: 'NeueRoman';
-	font-size:24px;
-	line-height:24px;
-	margin-bottom:14px;
-}
-.nfl-header h1 {
-    font-family:'NeueBlk';
-	font-size:48px;
-	line-height:48px;
-	margin-bottom:5px;
-}
-.nfl-no-pad-lr {
-	padding-left: 0rem !important; padding-right: 0rem !important;
-}
-
 /* Nutrition Label */
-#facts{
-	width:300;
-  margin-top:20px;
-	margin-right: 1rem;
-	z-index:10;
-	background:#0000;
-	border:1px solid #000;
-	padding:20px 0px;
-	font-size:15px;
-	line-height:15px;
-	box-shadow:4px 10px 10px rgba(0,0,0,0.2);
-}
-.on-label-blue #facts {
-    border: 2px solid #000000;
-}
 
-#facts .facts_title {
+.facts_title {
 	font-family: 'NeueBlk';
 	font-size: 35px;
 	line-height: 16px;
@@ -104,7 +65,7 @@ p {
     margin-bottom: 5px;
 }
 
-#facts a {
+a {
     color:#231f20;
     text-decoration: none;
 	transition:all 0.5s;
@@ -112,18 +73,18 @@ p {
     z-index: 10;
 }
 
-#facts a.light {
+a.light {
 	background:#FF0;
 	text-decoration:underline;
 	box-shadow:0 0 0px 2px #FF0;
 }
 
-#facts a:hover {
+a:hover {
     text-decoration: underline;
 }
 
 
-#facts .facts_serving_size {
+.facts_serving_size {
 	padding-top:4px;
 	padding-bottom:3px;
 	font-size:16px;
@@ -133,14 +94,14 @@ p {
 	padding-right:10px;
 }
 
-#facts .facts_serving_pre {
+.facts_serving_pre {
 	padding-bottom:3px;
 	font-size:14px;
 	line-height:14px;
 	padding-left:10px;
 	padding-right:10px;
 }
-#facts .calories {
+.calories {
 	padding-top:4px;
 	padding-bottom:12px;
 	font-size:1.5em !important;
@@ -148,30 +109,30 @@ p {
 	line-height:1em !important;
     position:relative;
 }
-#facts .calorieamt {
+.calorieamt {
 	padding-top:4px;
 	padding-bottom:12px;
 	font-size:1.8em !important;
     font-family: 'NeueBlk';
 	line-height:14px;
 }
-#facts .txt_right {
+.txt_right {
     text-align: right;
 }
-#facts strong {
+strong {
     font-family: 'NeueBlk';
 }
-#facts .facts_box {
+.facts_box {
 	border-top:13px solid #231f20;
 	margin-left:10px;
 	margin-right:10px;
 }
 
-#facts .facts_box.thin {
+.facts_box.thin {
 	border-width:5px;
 }
 
-#facts .fact_row {
+.fact_row {
 	padding-bottom:2px;
 	padding-top:5px;
 	font-size:14px;
@@ -179,7 +140,7 @@ p {
 	border-bottom:1px solid #838181;
 	position:relative;
 }
-#facts .fact_row_norule {
+.fact_row_norule {
 	padding-bottom:2px;
 	padding-top:5px;
 	font-size:14px;
@@ -187,26 +148,27 @@ p {
 	position:relative;
 }
 
-#facts .fact_row.pinkbg { background:#feeab8; padding-left: 10px; padding-right: 10px; margin-left: -10px; margin-right: -10px;}
-#facts .fact_row.bluebg { background:#ebf3c0; padding-left: 10px; padding-right: 10px; margin-left: -10px; margin-right: -10px;}
+.fact_row.pinkbg { background:#feeab8; padding-left: 10px; padding-right: 10px; margin-left: -10px; margin-right: -10px;}
+.fact_row.bluebg { background:#ebf3c0; padding-left: 10px; padding-right: 10px; margin-left: -10px; margin-right: -10px;}
 
-#facts .fact_row.pinkbg.sub {padding-left: 28px;}
-#facts .fact_row.bluebg.sub {padding-left: 28px;}
+.fact_row.pinkbg.sub {padding-left: 28px;}
+.fact_row.bluebg.sub {padding-left: 28px;}
 
 
-#facts .fact_row.sub {
+.fact_row.sub {
 	padding-left:18px;
+
 }
-#facts .fact_row.sublv2 {
+.fact_row.sublv2 {
 	margin-left:18px;
 }
-#facts .fact_row.sublv3 {
+.fact_row.sublv3 {
 	padding-left:36px;
 }
 
 
-#b_box #b_content #facts .plus_in_label,
-#b_box #b_content #facts .minus_in_label {
+#b_box #b_content .plus_in_label,
+#b_box #b_content .minus_in_label {
     width: 40px;
     position: absolute;
     top: 23px;
@@ -215,7 +177,7 @@ p {
     display: none;
 }
 
-#b_box #b_content #facts .fact_row.pinkbg.withicon:before {
+#b_box #b_content .fact_row.pinkbg.withicon:before {
     content:"\0020";
     background: #fab2dc;
     width: 35px;
@@ -228,7 +190,7 @@ p {
     display: none;
 }
 
-#b_box #b_content #facts .fact_row.bluebg.withicon:before {
+#b_box #b_content .fact_row.bluebg.withicon:before {
     content:"\0020";
     background: #b2e7fa;
     width: 35px;
@@ -241,15 +203,15 @@ p {
     display: none;
 }
 
-#b_box #b_content #facts .fact_row.pinkbg.withicon.withicon_min:before,
-#b_box #b_content #facts .fact_row.bluebg.withicon.withicon_min:before {
+#b_box #b_content .fact_row.pinkbg.withicon.withicon_min:before,
+#b_box #b_content .fact_row.bluebg.withicon.withicon_min:before {
     width: 19px;
     left:-23px;
     display: none;
 }
 
-#b_box #b_content #facts .plus_in_label_min,
-#b_box #b_content #facts .minus_in_label_min {
+#b_box #b_content .plus_in_label_min,
+#b_box #b_content .minus_in_label_min {
     width: 20px;
     position: absolute;
     top: 2px;
@@ -258,22 +220,22 @@ p {
     display: none;
 }
 
-#facts .fact_row small {
+.fact_row small {
 	font-size:12px;
 	line-height:12px;
 	font-family: 'NeueBl';
 	color:#000;
 }
 
-#facts .fact_row div {
+.fact_row div {
 	float:right;
 }
 
-#facts strong {
+strong {
 	color:#000;
 }
 
-#facts .facts_descr {
+.facts_descr {
 	padding-left:20px;
 	padding-right:10px;
 	font-size:11px;
@@ -283,7 +245,7 @@ p {
     color:#000;
 }
 
-#facts .facts_descr:before {
+.facts_descr:before {
 	content:'*';
 	font-size:12px;
 	position:absolute;
@@ -291,33 +253,33 @@ p {
 	left:12px;
 }
 
-#facts .facts_table {
+.facts_table {
 	margin-left:10px;
 	margin-right:10px;
     color:#000;
 }
 
-#facts table {
+/* table {
 	width:100%;
-}
+} */
 
-#facts table th,
-#facts table td {
+table th,
+table td {
 	font-size:11px;
 	line-height:11px;
 }
 
-#facts table th {
+table th {
     text-align: left;
 	padding-bottom:1px;
 }
 
-#facts table td {
+table td {
 	padding:3px 0 0px;
 	vertical-align:bottom;
 }
 
-#facts table tbody {
+table tbody {
 	border-top:1px solid #4c4849;
 }
 
