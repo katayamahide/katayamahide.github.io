@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <title>ぽちっと栄養表示</title>
   <link rel="icon" href="favicon.ico">
-  <meta name="description" content="海外栄養表示の簡単作成ツールです。最新の米国FDA栄養表示ルールに対応。" />
+  <meta name="description" content="反映海外栄養表示の簡単作成ツールです。最新の米国FDA栄養表示ルールに対応。" />
   <link rel="stylesheet" href="style.css">
   <meta name="twitter:title" content="ぽちっと栄養表示" />
   <meta name="twitter:url" content="https://www.pochi.ml/" />
@@ -33,7 +33,8 @@
       <div class="table" id="facts">
         <div class="facts_title">Nutrition Facts</div>
         <div class="facts_serving_pre"><span id="perContainer1"></span> servings per container</div>
-        <div class="facts_serving_size">Serving size <span id="servingText1"></span> (<span id="servingSize1"></span>g)</div>
+        <div class="facts_serving_size">Serving size <span id="servingText1"></span> (<span id="servingSize1"></span>g)
+        </div>
         <div class="facts_box">
           <div class="fact_row_norule"><small>Amount Per Serving</small></div>
           <div class="fact_row calories">
@@ -44,27 +45,33 @@
         <div class="facts_box thin">
           <div class="fact_row txt_right"><strong><small>% Daily Value*</small></strong></div>
           <div class="fact_row">
-            <div><strong><span id="totalFatDV"></span>%</strong></div><strong>Total Fat </strong><span id="totalFat1"></span>g
+            <div><strong><span id="totalFatDV"></span>%</strong></div><strong>Total Fat </strong><span
+              id="totalFat1"></span>g
           </div>
           <div class="fact_row sub">
-            <div><strong><span id="saturatedFatDV"></span>%</strong></div>Saturated Fat <span id="saturatedFat1"></span>g
+            <div><strong><span id="saturatedFatDV"></span>%</strong></div>Saturated Fat <span
+              id="saturatedFat1"></span>g
           </div>
           <div class="fact_row sub"><em>Trans</em> Fat <span id="transFat1"></span>g</div>
           <div class="fact_row">
-            <div><strong><span id="cholesterolDV"></span>%</strong></div><strong>Cholesterol</strong> <span id="cholesterol1"></span>mg
+            <div><strong><span id="cholesterolDV"></span>%</strong></div><strong>Cholesterol</strong> <span
+              id="cholesterol1"></span>mg
           </div>
           <div class="fact_row">
             <div><strong><span id="sodiumDV"></span>%</strong></div><strong>Sodium</strong> <span id="sodium1"></span>mg
           </div>
           <div class="fact_row">
-            <div><strong><span id="totalCarbonhydrateDV"></span>%</strong></div><strong>Total Carbohydrate</strong> <span id="totalCarbonhydrate1"></span>g
+            <div><strong><span id="totalCarbonhydrateDV"></span>%</strong></div><strong>Total Carbohydrate</strong>
+            <span id="totalCarbonhydrate1"></span>g
           </div>
           <div class="fact_row sub">
-            <div><strong><span id="dietaryFiberDV"></span>%</strong></div>Dietary Fiber <span id="dietaryFiber1"></span>g
+            <div><strong><span id="dietaryFiberDV"></span>%</strong></div>Dietary Fiber <span
+              id="dietaryFiber1"></span>g
           </div>
           <div class="fact_row sublv2">Total Sugars <span id="totalSugars1"></span>g</div>
           <div class="fact_row sublv3">
-            <div><strong><span id="addedSugarsDV"></span>%</strong></div>Includes <span id="addedSugars1"></span>g Added Sugars
+            <div><strong><span id="addedSugarsDV"></span>%</strong></div>Includes <span id="addedSugars1"></span>g Added
+            Sugars
           </div>
           <div class="fact_row"><strong>Protein</strong> <span id="protein1"></span>g</div>
         </div>
@@ -83,33 +90,52 @@
           </div>
         </div>
         <div class="facts_descr">
-          The % Daily Value (DV) tells you how much a nutrient in a serving of food contributes to a daily diet. 2,000 calories a day is used for general nutrition advice.
+          The % Daily Value (DV) tells you how much a nutrient in a serving of food contributes to a daily diet. 2,000
+          calories a day is used for general nutrition advice.
         </div>
       </div>
-    <div class="forms">
-      <form name="form">
-        <p>パッケージ当たり食数 Servings per container <input type="text" name="servingsPerContainer" value="" size="5" maxlength="3" onKeyUp="perContainer()"><span id="perContainer2"></span></p>
-        <p>1食分の量(g以外) (Optional) Serving size(Other than"g") <input type="text" name="servingText" value="" size="5" maxlength="35" onKeyUp="servingTextValue()"><span id="servingText2"></span></p>
-        <p>1食分の量(g) Serving size(g) <input type="text" name="servingSize" value="" size="5" maxlength="5" onKeyUp="servingSizeValue()"><span id="servingSize2"></span>g</p>
-        <p>熱量 Calories <input type="text" name="calories" value="" size="5" maxlength="5" onKeyUp="caloriesValue()"><span id="calories2"></span></p>
-        <p>総脂質 Total Fat <input type="text" name="totalFat" value="" size="5" maxlength="5" onKeyUp="totalFatValue()"><span id="totalFat2"></span></p>
-        <p>飽和脂肪酸 saturated Fat <input type="text" name="saturatedFat" value="" size="5" maxlength="5" onKeyUp="saturatedFatValue()"><span id="saturatedFat2"></span></p>
-        <p>トランス脂肪酸 Trans Fat <input type="text" name="transFat" value="" size="5" maxlength="5" onKeyUp="transFatValue()"><span id="transFat2"></span></p>
-        <p>コレステロール Cholesterol <input type="text" name="cholesterol" value="" size="5" maxlength="5" onKeyUp="cholesterolValue()"><span id="cholesterol2"></span>mg</p>
-        <p>ナトリウム Sodium <input type="text" name="sodium" value="" size="5" maxlength="5" onKeyUp="sodiumValue()"><span id="sodium2"></span></p>
-        <p>総炭水化物 Total Carbonhydrate <input type="text" name="totalCarbonhydrate" value="" size="5" maxlength="5" onKeyUp="totalCarbonhydrateValue()"><span id="totalCarbonhydrate2"></span></p>
-        <p>食物繊維 Dietary Fiber <input type="text" name="dietaryFiber" value="" size="5" maxlength="5" onKeyUp="dietaryFiberValue()"><span id="dietaryFiber2"></span></p>
-        <p>総糖類 Total Sugars <input type="text" name="totalSugars" value="" size="5" maxlength="5" onKeyUp="totalSugarsValue()"><span id="totalSugars2"></span></p>
-        <p>添加糖類 Added Sugars <input type="text" name="addedSugars" value="" size="5" maxlength="5" onKeyUp="addedSugarsValue()"><span id="addedSugars2"></span></p>
-        <p>タンパク質 Protein <input type="text" name="protein" value="" size="5" maxlength="5" onKeyUp="proteinValue()"><span id="protein2"></span></p>
-        <p>ビタミンD Vitamin D <input type="text" name="vitaminD" value="" size="5" maxlength="5" onKeyUp="vitaminDValue()"><span id="vitaminD2"></span></p>
-        <p>カルシウム Calcium <input type="text" name="calcium" value="" size="5" maxlength="5" onKeyUp="calciumValue()"><span id="calcium2"></span></p>
-        <p>鉄分 Iron <input type="text" name="iron" value="" size="5" maxlength="5" onKeyUp="ironValue()"><span id="iron2"></span></p>
-        <p>カリウム Potassium <input type="text" name="potassium" value="" size="5" maxlength="5" onKeyUp="potassiumValue()"><span id="potassium2"></span></p>
-        <input type="button" value="ポチっと" onclick="clickBtn1()" />
-        <input type="button" value="クリア" onclick="clickBtn2()" />
-      </form>
-    </div>
+      <div class="forms">
+        <form name="form">
+          <p>パッケージ当たり食数 Servings per container <input type="text" name="servingsPerContainer" value="" size="5"
+              maxlength="3" onKeyUp="perContainer()"><span id="perContainer2"></span></p>
+          <p>1食分の量(g以外) (Optional) Serving size(Other than"g") <input type="text" name="servingText" value="" size="5"
+              maxlength="35" onKeyUp="servingTextValue()"><span id="servingText2"></span></p>
+          <p>1食分の量(g) Serving size(g) <input type="text" name="servingSize" value="" size="5" maxlength="5"
+              onKeyUp="servingSizeValue()"><span id="servingSize2"></span>g</p>
+          <p>熱量 Calories <input type="text" name="calories" value="" size="5" maxlength="5"
+              onKeyUp="caloriesValue()"><span id="calories2"></span></p>
+          <p>総脂質 Total Fat <input type="text" name="totalFat" value="" size="5" maxlength="5"
+              onKeyUp="totalFatValue()"><span id="totalFat2"></span></p>
+          <p>飽和脂肪酸 saturated Fat <input type="text" name="saturatedFat" value="" size="5" maxlength="5"
+              onKeyUp="saturatedFatValue()"><span id="saturatedFat2"></span></p>
+          <p>トランス脂肪酸 Trans Fat <input type="text" name="transFat" value="" size="5" maxlength="5"
+              onKeyUp="transFatValue()"><span id="transFat2"></span></p>
+          <p>コレステロール Cholesterol <input type="text" name="cholesterol" value="" size="5" maxlength="5"
+              onKeyUp="cholesterolValue()"><span id="cholesterol2"></span>mg</p>
+          <p>ナトリウム Sodium <input type="text" name="sodium" value="" size="5" maxlength="5" onKeyUp="sodiumValue()"><span
+              id="sodium2"></span></p>
+          <p>総炭水化物 Total Carbonhydrate <input type="text" name="totalCarbonhydrate" value="" size="5" maxlength="5"
+              onKeyUp="totalCarbonhydrateValue()"><span id="totalCarbonhydrate2"></span></p>
+          <p>食物繊維 Dietary Fiber <input type="text" name="dietaryFiber" value="" size="5" maxlength="5"
+              onKeyUp="dietaryFiberValue()"><span id="dietaryFiber2"></span></p>
+          <p>総糖類 Total Sugars <input type="text" name="totalSugars" value="" size="5" maxlength="5"
+              onKeyUp="totalSugarsValue()"><span id="totalSugars2"></span></p>
+          <p>添加糖類 Added Sugars <input type="text" name="addedSugars" value="" size="5" maxlength="5"
+              onKeyUp="addedSugarsValue()"><span id="addedSugars2"></span></p>
+          <p>タンパク質 Protein <input type="text" name="protein" value="" size="5" maxlength="5"
+              onKeyUp="proteinValue()"><span id="protein2"></span></p>
+          <p>ビタミンD Vitamin D <input type="text" name="vitaminD" value="" size="5" maxlength="5"
+              onKeyUp="vitaminDValue()"><span id="vitaminD2"></span></p>
+          <p>カルシウム Calcium <input type="text" name="calcium" value="" size="5" maxlength="5"
+              onKeyUp="calciumValue()"><span id="calcium2"></span></p>
+          <p>鉄分 Iron <input type="text" name="iron" value="" size="5" maxlength="5" onKeyUp="ironValue()"><span
+              id="iron2"></span></p>
+          <p>カリウム Potassium <input type="text" name="potassium" value="" size="5" maxlength="5"
+              onKeyUp="potassiumValue()"><span id="potassium2"></span></p>
+          <input type="button" value="ポチっと" onclick="clickBtn1()" />
+          <input type="button" value="クリア" onclick="clickBtn2()" />
+        </form>
+      </div>
     </div>
   </main>
 
@@ -531,7 +557,9 @@
   <script src="html2canvas.js"></script>
   <script type="text/javascript">
     function clickBtn1() {
-      html2canvas(document.getElementById("facts"), {scale: 2}).then(canvas => {
+      html2canvas(document.getElementById("facts"), {
+        scale: 2
+      }).then(canvas => {
         document.body.append(canvas)
       });
     }
