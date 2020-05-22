@@ -38,16 +38,16 @@
               servings</td>
           </tr>
           <tr>
+            <th>1食分の量(g)</th>
+            <th>Serving size(g)</th>
+            <td><input type="number" name="servingSize" value="" size="5" maxlength="5" onKeyUp="goodman()"> g
+            </td>
+          </tr>
+          <tr>
             <th>1食分の量(g以外)</th>
             <th>Serving size(Other than"g")
             <td><input type="text" name="servingText" placeholder="任意(optional)" size="20" maxlength="20"
                 onKeyUp="goodman()">
-            </td>
-          </tr>
-          <tr>
-            <th>1食分の量(g)</th>
-            <th>Serving size(g)</th>
-            <td><input type="number" name="servingSize" value="" size="5" maxlength="5" onKeyUp="goodman()"> g
             </td>
           </tr>
         </table>
@@ -150,7 +150,9 @@
       <div class="table" id="facts">
         <div class="facts_title">Nutrition Facts</div>
         <div class="facts_serving_pre"><span id="perContainer1"></span> servings per container</div>
-        <div class="facts_serving_size">Serving size <span id="servingText1"></span> (<span id="servingSize1"></span>g)
+        <div class="ss">
+          <div class="facts_serving_size">Serving size</div>
+          <div class="facts_serving_size"><span id="servingText1"></span> (<span id="servingSize1"></span>g)</div>
         </div>
         <div class="facts_box">
           <div class="fact_row_norule"><small>Amount Per Serving</small></div>
@@ -216,7 +218,7 @@
     <div class="result" id="result"> </div>
   </main>
   <footer>
-    <small>Copyright (c) DGT group All Rights Reserved.</small>
+    <small> Copyright &copy; <a href="https://www.pochi.ml/DGT2/"> DGT group</a> All Rights Reserved.</small>
   </footer>
 
 
