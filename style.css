@@ -1,82 +1,81 @@
-
-.logo{
-	width: 240px;
+.logo {
+    width: 240px;
 }
 
-header{
-	background-color: #efefef;
+header {
+    background-color: #efefef;
 }
 
 p {
-  margin: 10px 0px 5px 0px;
+    margin: 10px 0px 5px 0px;
 }
 
-.forms{
-	margin-top:20px;
+.forms {
+    margin: 20px 80px;
 }
 
-.header_container{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-}
-
-
-.main_container{
-	display: flex;
-	justify-content: center;
-}
-
-.table{
-	width: 342px;
-	height: 520px;
-	margin-top:20px;
-	margin-right: 20px;
-	background:#0000;
-	border:1px solid #000;
-	padding:20px 0px;
-	font-size:15px;
-	line-height:15px;
-	box-shadow:4px 10px 10px rgba(0,0,0,0.2);
+.header_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 
-.footer{
-	margin-top: 30px;
-	display: flex;
-	justify-content: center;
-	height:100px;
-	background-color: #efefef;
-	align-items: center;
-	font-size: 14px;
-	color: grey;
+.main_container {
+    display: flex;
+    justify-content: center;
+}
+
+.table {
+    width: 342px;
+    height: 520px;
+    margin-top: 20px;
+    margin-right: 20px;
+    background: #0000;
+    border: 1px solid #000;
+    padding: 20px 0px;
+    font-size: 15px;
+    line-height: 15px;
+    box-shadow: 4px 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+.footer {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    height: 100px;
+    background-color: #efefef;
+    align-items: center;
+    font-size: 14px;
+    color: grey;
 }
 
 /* Nutrition Label */
 
 .facts_title {
-	font-family: 'NeueBlk';
-	font-size: 35px;
-	line-height: 16px;
-	color:#231f20;
-	padding-left:10px;
-	padding-right:10px;
+    font-family: 'NeueBlk';
+    font-size: 35px;
+    line-height: 16px;
+    color: #231f20;
+    padding-left: 10px;
+    padding-right: 10px;
     margin-bottom: 5px;
 }
 
 a {
-    color:#231f20;
+    color: #231f20;
     text-decoration: none;
-	transition:all 0.5s;
+    transition: all 0.5s;
     position: relative;
     z-index: 10;
 }
 
 a.light {
-	background:#FF0;
-	text-decoration:underline;
-	box-shadow:0 0 0px 2px #FF0;
+    background: #FF0;
+    text-decoration: underline;
+    box-shadow: 0 0 0px 2px #FF0;
 }
 
 a:hover {
@@ -85,85 +84,111 @@ a:hover {
 
 
 .facts_serving_size {
-	padding-top:4px;
-	padding-bottom:3px;
-	font-size:16px;
+    padding-top: 4px;
+    padding-bottom: 3px;
+    font-size: 16px;
     font-family: 'NeueBlk';
-	line-height:14px;
-	padding-left:10px;
-	padding-right:10px;
+    line-height: 14px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .facts_serving_pre {
-	padding-bottom:3px;
-	font-size:14px;
-	line-height:14px;
-	padding-left:10px;
-	padding-right:10px;
+    padding-bottom: 3px;
+    font-size: 14px;
+    line-height: 14px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
+
 .calories {
-	padding-top:4px;
-	padding-bottom:12px;
-	font-size:1.5em !important;
+    padding-top: 4px;
+    padding-bottom: 12px;
+    font-size: 1.5em !important;
     font-family: 'NeueBlk';
-	line-height:1em !important;
-    position:relative;
+    line-height: 1em !important;
+    position: relative;
 }
+
 .calorieamt {
-	padding-top:4px;
-	padding-bottom:12px;
-	font-size:1.8em !important;
+    padding-top: 4px;
+    padding-bottom: 12px;
+    font-size: 1.8em !important;
     font-family: 'NeueBlk';
-	line-height:14px;
+    line-height: 14px;
 }
+
 .txt_right {
     text-align: right;
 }
+
 strong {
     font-family: 'NeueBlk';
 }
+
 .facts_box {
-	border-top:13px solid #231f20;
-	margin-left:10px;
-	margin-right:10px;
+    border-top: 13px solid #231f20;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .facts_box.thin {
-	border-width:5px;
+    border-width: 5px;
 }
 
 .fact_row {
-	padding-bottom:2px;
-	padding-top:5px;
-	font-size:14px;
-	line-height:14px;
-	border-bottom:1px solid #838181;
-	position:relative;
+    padding-bottom: 2px;
+    padding-top: 5px;
+    font-size: 14px;
+    line-height: 14px;
+    border-bottom: 1px solid #838181;
+    position: relative;
 }
+
 .fact_row_norule {
-	padding-bottom:2px;
-	padding-top:5px;
-	font-size:14px;
-	line-height:14px;
-	position:relative;
+    padding-bottom: 2px;
+    padding-top: 5px;
+    font-size: 14px;
+    line-height: 14px;
+    position: relative;
 }
 
-.fact_row.pinkbg { background:#feeab8; padding-left: 10px; padding-right: 10px; margin-left: -10px; margin-right: -10px;}
-.fact_row.bluebg { background:#ebf3c0; padding-left: 10px; padding-right: 10px; margin-left: -10px; margin-right: -10px;}
+.fact_row.pinkbg {
+    background: #feeab8;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: -10px;
+    margin-right: -10px;
+}
 
-.fact_row.pinkbg.sub {padding-left: 28px;}
-.fact_row.bluebg.sub {padding-left: 28px;}
+.fact_row.bluebg {
+    background: #ebf3c0;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+.fact_row.pinkbg.sub {
+    padding-left: 28px;
+}
+
+.fact_row.bluebg.sub {
+    padding-left: 28px;
+}
 
 
 .fact_row.sub {
-	padding-left:18px;
+    padding-left: 18px;
 
 }
+
 .fact_row.sublv2 {
-	margin-left:18px;
+    margin-left: 18px;
 }
+
 .fact_row.sublv3 {
-	padding-left:36px;
+    padding-left: 36px;
 }
 
 
@@ -178,27 +203,27 @@ strong {
 }
 
 #b_box #b_content .fact_row.pinkbg.withicon:before {
-    content:"\0020";
+    content: "\0020";
     background: #fab2dc;
     width: 35px;
     height: 100%;
-    border-top:1px solid #fab2dc;
+    border-top: 1px solid #fab2dc;
     position: absolute;
-    top:0;
-    left:-39px;
+    top: 0;
+    left: -39px;
     z-index: 1;
     display: none;
 }
 
 #b_box #b_content .fact_row.bluebg.withicon:before {
-    content:"\0020";
+    content: "\0020";
     background: #b2e7fa;
     width: 35px;
     height: 100%;
-    border-top:1px solid #b2e7fa;
+    border-top: 1px solid #b2e7fa;
     position: absolute;
-    top:0;
-    left:-39px;
+    top: 0;
+    left: -39px;
     z-index: 1;
     display: none;
 }
@@ -206,7 +231,7 @@ strong {
 #b_box #b_content .fact_row.pinkbg.withicon.withicon_min:before,
 #b_box #b_content .fact_row.bluebg.withicon.withicon_min:before {
     width: 19px;
-    left:-23px;
+    left: -23px;
     display: none;
 }
 
@@ -221,42 +246,42 @@ strong {
 }
 
 .fact_row small {
-	font-size:12px;
-	line-height:12px;
-	font-family: 'NeueBl';
-	color:#000;
+    font-size: 12px;
+    line-height: 12px;
+    font-family: 'NeueBl';
+    color: #000;
 }
 
 .fact_row div {
-	float:right;
+    float: right;
 }
 
 strong {
-	color:#000;
+    color: #000;
 }
 
 .facts_descr {
-	padding-left:20px;
-	padding-right:10px;
-	font-size:11px;
-	line-height:12px;
-	margin:8px 0 8px;
-	position:relative;
-    color:#000;
+    padding-left: 20px;
+    padding-right: 10px;
+    font-size: 11px;
+    line-height: 12px;
+    margin: 8px 0 8px;
+    position: relative;
+    color: #000;
 }
 
 .facts_descr:before {
-	content:'*';
-	font-size:12px;
-	position:absolute;
-	top:2px;
-	left:12px;
+    content: '*';
+    font-size: 12px;
+    position: absolute;
+    top: 2px;
+    left: 12px;
 }
 
 .facts_table {
-	margin-left:10px;
-	margin-right:10px;
-    color:#000;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: #000;
 }
 
 /* table {
@@ -265,22 +290,22 @@ strong {
 
 table th,
 table td {
-	font-size:11px;
-	line-height:11px;
+    font-size: 11px;
+    line-height: 11px;
 }
 
 table th {
     text-align: left;
-	padding-bottom:1px;
+    padding-bottom: 1px;
 }
 
 table td {
-	padding:3px 0 0px;
-	vertical-align:bottom;
+    padding: 3px 0 0px;
+    vertical-align: bottom;
 }
 
 table tbody {
-	border-top:1px solid #4c4849;
+    border-top: 1px solid #4c4849;
 }
 
 
@@ -288,20 +313,20 @@ table tbody {
     font-family: 'Museo';
     src: url('fonts/2CA46C_0_0.eot');
     src: url('fonts/2CA46C_0_0.eot?#iefix') format('embedded-opentype'),
-    url('fonts/2CA46C_0_0.woff2') format('woff2'),
-    url('fonts/2CA46C_0_0.woff') format('woff'),
-    url('fonts/2CA46C_0_0.ttf') format('truetype');
+        url('fonts/2CA46C_0_0.woff2') format('woff2'),
+        url('fonts/2CA46C_0_0.woff') format('woff'),
+        url('fonts/2CA46C_0_0.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'NeueRoman';
     src: url('fonts/2CA3C4_0_0.eot');
     src:
-    url('fonts/HelveticaNeueLTStd-Roman.otf'),
-    url('fonts/2CA3C4_0_0.eot?#iefix') format('embedded-opentype'),
-    url('fonts/2CA3C4_0_0.woff2') format('woff2'),
-    url('fonts/2CA3C4_0_0.woff') format('woff'),
-    url('fonts/2CA3C4_0_0.ttf') format('truetype');
+        url('fonts/HelveticaNeueLTStd-Roman.otf'),
+        url('fonts/2CA3C4_0_0.eot?#iefix') format('embedded-opentype'),
+        url('fonts/2CA3C4_0_0.woff2') format('woff2'),
+        url('fonts/2CA3C4_0_0.woff') format('woff'),
+        url('fonts/2CA3C4_0_0.ttf') format('truetype');
 }
 
 
@@ -309,11 +334,11 @@ table tbody {
     font-family: 'NeueBl';
     src: url('fonts/2CA3C4_1_0.eot');
     src:
-    url('fonts/HelveticaNeueLTStd-Bd.otf'),
-    url('fonts/2CA3C4_1_0.eot?#iefix') format('embedded-opentype'),
-    url('fonts/2CA3C4_1_0.woff2') format('woff2'),
-    url('fonts/2CA3C4_1_0.woff') format('woff'),
-    url('fonts/2CA3C4_1_0.ttf') format('truetype');
+        url('fonts/HelveticaNeueLTStd-Bd.otf'),
+        url('fonts/2CA3C4_1_0.eot?#iefix') format('embedded-opentype'),
+        url('fonts/2CA3C4_1_0.woff2') format('woff2'),
+        url('fonts/2CA3C4_1_0.woff') format('woff'),
+        url('fonts/2CA3C4_1_0.ttf') format('truetype');
 }
 
 
@@ -321,11 +346,11 @@ table tbody {
     font-family: 'NeueBlk';
     src: url('fonts/2CA3C4_2_0.eot');
     src:
-    url('fonts/HelveticaNeueLTStd-Blk.otf'),
-    url('fonts/2CA3C4_2_0.eot?#iefix') format('embedded-opentype'),
-    url('fonts/2CA3C4_2_0.woff2') format('woff2'),
-    url('fonts/2CA3C4_2_0.woff') format('woff'),
-    url('fonts/2CA3C4_2_0.ttf') format('truetype');
+        url('fonts/HelveticaNeueLTStd-Blk.otf'),
+        url('fonts/2CA3C4_2_0.eot?#iefix') format('embedded-opentype'),
+        url('fonts/2CA3C4_2_0.woff2') format('woff2'),
+        url('fonts/2CA3C4_2_0.woff') format('woff'),
+        url('fonts/2CA3C4_2_0.ttf') format('truetype');
 }
 
 
@@ -333,11 +358,11 @@ table tbody {
     font-family: 'NeueCn';
     src: url('fonts/2CA3C4_3_0.eot');
     src:
-    url('fonts/HelveticaNeueLTStd-Cn.otf'),
-    url('fonts/2CA3C4_3_0.eot?#iefix') format('embedded-opentype'),
-    url('fonts/2CA3C4_3_0.woff2') format('woff2'),
-    url('fonts/2CA3C4_3_0.woff') format('woff'),
-    url('fonts/2CA3C4_3_0.ttf') format('truetype');
+        url('fonts/HelveticaNeueLTStd-Cn.otf'),
+        url('fonts/2CA3C4_3_0.eot?#iefix') format('embedded-opentype'),
+        url('fonts/2CA3C4_3_0.woff2') format('woff2'),
+        url('fonts/2CA3C4_3_0.woff') format('woff'),
+        url('fonts/2CA3C4_3_0.ttf') format('truetype');
 }
 
 
@@ -345,11 +370,11 @@ table tbody {
     font-family: 'HelveticaNeueLTStd-BdIt';
     src: url('fonts/2CA3C4_4_0.eot');
     src:
-    url('fonts/HelveticaNeueLTStd-BdIt.otf'),
-    url('fonts/2CA3C4_4_0.eot?#iefix') format('embedded-opentype'),
-    url('fonts/2CA3C4_4_0.woff2') format('woff2'),
-    url('fonts/2CA3C4_4_0.woff') format('woff'),
-    url('fonts/2CA3C4_4_0.ttf') format('truetype');
+        url('fonts/HelveticaNeueLTStd-BdIt.otf'),
+        url('fonts/2CA3C4_4_0.eot?#iefix') format('embedded-opentype'),
+        url('fonts/2CA3C4_4_0.woff2') format('woff2'),
+        url('fonts/2CA3C4_4_0.woff') format('woff'),
+        url('fonts/2CA3C4_4_0.ttf') format('truetype');
 }
 
 
@@ -357,7 +382,7 @@ table tbody {
     font-family: 'HelveticaNeueLTStd-It';
     src: url('fonts/2CA3C4_5_0.eot');
     src: url('fonts/2CA3C4_5_0.eot?#iefix') format('embedded-opentype'),
-    url('fonts/2CA3C4_5_0.woff2') format('woff2'),
-    url('fonts/2CA3C4_5_0.woff') format('woff'),
-    url('fonts/2CA3C4_5_0.ttf') format('truetype');
+        url('fonts/2CA3C4_5_0.woff2') format('woff2'),
+        url('fonts/2CA3C4_5_0.woff') format('woff'),
+        url('fonts/2CA3C4_5_0.ttf') format('truetype');
 }
