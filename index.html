@@ -7,6 +7,7 @@
   <link rel="icon" href="favicon.ico">
   <meta name="description" content="海外栄養表示の簡単作成ツールです。最新の米国FDA栄養表示ルールに対応。" />
   <link rel="stylesheet" href="style.css">
+  <!-- Twitterカード -->
   <meta name="twitter:title" content="ぽちっと栄養表示" />
   <meta name="twitter:url" content="https://www.pochi.ml/" />
   <meta name="twitter:description" content="海外栄養表示の簡単作成ツールです。最新の米国FDA栄養表示ルールに対応。" />
@@ -17,140 +18,135 @@
 
 <body>
   <header>
-    <div class="header_container">
-      <div class="logo">
-        <a href="./index.html">
-          <img src="logo2.png" class="logo" alt="ぽちっと栄養表示は海外栄養表示の簡単作成ツールです">
-        </a>
-      </div>
-      <div class="info">
-        <p>米国FDA栄養表示の簡単作成ツール</p>
-      </div>
+    <div class="logo">
+      <a href="index.html">
+        <img src="logo2.png" class="logo" alt="ロゴ">
+      </a>
+    </div>
+    <div class="info">
+      <p>米国FDA栄養表示の簡単作成ツール</p>
     </div>
   </header>
   <main>
     <div class="main_container">
-      <div class="forms">
-        <form name="form">
-          <table border="1px">
-            <tr>
-              <th>パッケージ当たり食数</th>
-              <th>Servings per container</th>
-              <td><input type="number" autofocus name="servingsPerContainer" size="5" maxlength="3" onKeyUp="goodman()">
-                servings</td>
-            </tr>
-            <tr>
-              <th>1食分の量(g以外)</th>
-              <th>Serving size(Other than"g")
-              <td><input type="text" name="servingText" placeholder="任意(optional)" size="20" maxlength="20"
-                  onKeyUp="goodman()">
-              </td>
-            </tr>
-            <tr>
-              <th>1食分の量(g)</th>
-              <th>Serving size(g)</th>
-              <td><input type="number" name="servingSize" value="" size="5" maxlength="5" onKeyUp="goodman()"> g
-              </td>
-            </tr>
-          </table>
-          <table border="1px">
-            <tr>
-              <th>項目</th>
-              <th>項目(英語)</th>
-              <th>100g当たり</th>
-            </tr>
-            <tr>
-              <th>熱量</th>
-              <th>Calories</th>
-              <td><input type="number" name="calories" value="" size="5" maxlength="5" onKeyUp="goodman()">
-                kcal/100g</td>
-            </tr>
-            <tr>
-              <th>総脂質
-              <th>Total Fat</th>
-              <td><input type="number" name="totalFat" value="" size="5" maxlength="5" onKeyUp="goodman()"> g/100g
-              </td>
-            </tr>
-            <tr>
-              <th>飽和脂肪酸</th>
-              <th>saturated Fat</th>
-              <td><input type="number" name="saturatedFat" value="" size="5" maxlength="5" onKeyUp="goodman()">
-                g/100g</td>
-            </tr>
-            <tr>
-              <th>トランス脂肪酸</th>
-              <th>Trans Fat</th>
-              <td><input type="number" name="transFat" value="" size="5" maxlength="5" onKeyUp="goodman()"> g/100g
-              </td>
-            </tr>
-            <tr>
-              <th>コレステロール</th>
-              <th>Cholesterol</th>
-              <td><input type="number" name="cholesterol" value="" size="5" maxlength="5" onKeyUp="goodman()">
-                mg/100g</td>
-            </tr>
-            <tr>
-              <th>ナトリウム</th>
-              <th>Sodium</th>
-              <td><input type="number" name="sodium" value="" size="5" maxlength="5" onKeyUp="goodman()"> mg/100g</td>
-            </tr>
-            <tr>
-              <th>総炭水化物</th>
-              <th>Total Carbonhydrate</th>
-              <td><input type="number" name="totalCarbonhydrate" value="" size="5" maxlength="5" onKeyUp="goodman()">
-                g/100g</td>
-            </tr>
-            <tr>
-              <th>食物繊維</th>
-              <th>Dietary Fiber</th>
-              <td><input type="number" name="dietaryFiber" value="" size="5" maxlength="5" onKeyUp="goodman()">
-                g/100g</td>
-            </tr>
-            <tr>
-              <th>総糖類</th>
-              <th>Total Sugars</th>
-              <td><input type="number" name="totalSugars" value="" size="5" maxlength="5" onKeyUp="goodman()">
-                g/100g</td>
-            </tr>
-            <tr>
-              <th>添加糖類</th>
-              <th>Added Sugars</th>
-              <td><input type="number" name="addedSugars" value="" size="5" maxlength="5" onKeyUp="goodman()">
-                g/100g</td>
-            </tr>
-            <tr>
-              <th>タンパク質</th>
-              <th>Protein</th>
-              <td><input type="number" name="protein" value="" size="5" maxlength="5" onKeyUp="goodman()"> g/100g
-              </td>
-            </tr>
-            <tr>
-              <th>ビタミンD</th>
-              <th>Vitamin D</th>
-              <td><input type="number" name="vitaminD" value="" size="5" maxlength="5" onKeyUp="goodman()"> mcg/100g
-              </td>
-            </tr>
-            <tr>
-              <th>カルシウム</th>
-              <th>Calcium</th>
-              <td><input type="number" name="calcium" value="" size="5" maxlength="5" onKeyUp="goodman()"> mg/100g
-              </td>
-            </tr>
-            <tr>
-              <th>鉄分</th>
-              <th>Iron</th>
-              <td><input type="number" name="iron" value="" size="5" maxlength="5" onKeyUp="goodman()"> mg/100g</td>
-            </tr>
-            <tr>
-              <th>カリウム</th>
-              <th>Potassium</th>
-              <td><input type="number" name="potassium" value="" size="5" maxlength="5" onKeyUp="goodman()">
-                mg/100g</td>
-            </tr>
-          </table>
-          <input type="button" value="画像出力" onclick="clickBtn1()" />
-        </form>
-      </div>
+      <form name="form">
+        <table border="1px">
+          <tr>
+            <th>パッケージ当たり食数</th>
+            <th>Servings per container</th>
+            <td><input type="number" autofocus name="servingsPerContainer" size="5" maxlength="3" onKeyUp="goodman()">
+              servings</td>
+          </tr>
+          <tr>
+            <th>1食分の量(g以外)</th>
+            <th>Serving size(Other than"g")
+            <td><input type="text" name="servingText" placeholder="任意(optional)" size="20" maxlength="20"
+                onKeyUp="goodman()">
+            </td>
+          </tr>
+          <tr>
+            <th>1食分の量(g)</th>
+            <th>Serving size(g)</th>
+            <td><input type="number" name="servingSize" value="" size="5" maxlength="5" onKeyUp="goodman()"> g
+            </td>
+          </tr>
+        </table>
+        <table border="1px">
+          <tr>
+            <th>栄養素</th>
+            <th>Nutrients</th>
+            <th>100g当たりの値</th>
+          </tr>
+          <tr>
+            <th>熱量</th>
+            <th>Calories</th>
+            <td><input type="number" name="calories" value="" size="5" maxlength="5" onKeyUp="goodman()">
+              kcal/100g</td>
+          </tr>
+          <tr>
+            <th>総脂質
+            <th>Total Fat</th>
+            <td><input type="number" name="totalFat" value="" size="5" maxlength="5" onKeyUp="goodman()"> g/100g
+            </td>
+          </tr>
+          <tr>
+            <th>飽和脂肪酸</th>
+            <th>saturated Fat</th>
+            <td><input type="number" name="saturatedFat" value="" size="5" maxlength="5" onKeyUp="goodman()">
+              g/100g</td>
+          </tr>
+          <tr>
+            <th>トランス脂肪酸</th>
+            <th>Trans Fat</th>
+            <td><input type="number" name="transFat" value="" size="5" maxlength="5" onKeyUp="goodman()"> g/100g
+            </td>
+          </tr>
+          <tr>
+            <th>コレステロール</th>
+            <th>Cholesterol</th>
+            <td><input type="number" name="cholesterol" value="" size="5" maxlength="5" onKeyUp="goodman()">
+              mg/100g</td>
+          </tr>
+          <tr>
+            <th>ナトリウム</th>
+            <th>Sodium</th>
+            <td><input type="number" name="sodium" value="" size="5" maxlength="5" onKeyUp="goodman()"> mg/100g</td>
+          </tr>
+          <tr>
+            <th>総炭水化物</th>
+            <th>Total Carbonhydrate</th>
+            <td><input type="number" name="totalCarbonhydrate" value="" size="5" maxlength="5" onKeyUp="goodman()">
+              g/100g</td>
+          </tr>
+          <tr>
+            <th>食物繊維</th>
+            <th>Dietary Fiber</th>
+            <td><input type="number" name="dietaryFiber" value="" size="5" maxlength="5" onKeyUp="goodman()">
+              g/100g</td>
+          </tr>
+          <tr>
+            <th>総糖類</th>
+            <th>Total Sugars</th>
+            <td><input type="number" name="totalSugars" value="" size="5" maxlength="5" onKeyUp="goodman()">
+              g/100g</td>
+          </tr>
+          <tr>
+            <th>添加糖類</th>
+            <th>Added Sugars</th>
+            <td><input type="number" name="addedSugars" value="" size="5" maxlength="5" onKeyUp="goodman()">
+              g/100g</td>
+          </tr>
+          <tr>
+            <th>タンパク質</th>
+            <th>Protein</th>
+            <td><input type="number" name="protein" value="" size="5" maxlength="5" onKeyUp="goodman()"> g/100g
+            </td>
+          </tr>
+          <tr>
+            <th>ビタミンD</th>
+            <th>Vitamin D</th>
+            <td><input type="number" name="vitaminD" value="" size="5" maxlength="5" onKeyUp="goodman()"> mcg/100g
+            </td>
+          </tr>
+          <tr>
+            <th>カルシウム</th>
+            <th>Calcium</th>
+            <td><input type="number" name="calcium" value="" size="5" maxlength="5" onKeyUp="goodman()"> mg/100g
+            </td>
+          </tr>
+          <tr>
+            <th>鉄分</th>
+            <th>Iron</th>
+            <td><input type="number" name="iron" value="" size="5" maxlength="5" onKeyUp="goodman()"> mg/100g</td>
+          </tr>
+          <tr>
+            <th>カリウム</th>
+            <th>Potassium</th>
+            <td><input type="number" name="potassium" value="" size="5" maxlength="5" onKeyUp="goodman()">
+              mg/100g</td>
+          </tr>
+        </table>
+      </form>
       <div class="table" id="facts">
         <div class="facts_title">Nutrition Facts</div>
         <div class="facts_serving_pre"><span id="perContainer1"></span> servings per container</div>
@@ -216,7 +212,12 @@
         </div>
       </div>
     </div>
+    <div class="result"><input type="button" value="画像出力" onclick="clickBtn1()" /></div>
+    <div class="result" id="result"> </div>
   </main>
+  <footer>
+    <small>Copyright (c) DGT group All Rights Reserved.</small>
+  </footer>
 
 
   <script>
@@ -551,8 +552,10 @@
     function clickBtn1() {
       html2canvas(document.getElementById("facts"), {
         scale: 2
-      }).then(canvas => {
-        document.body.append(canvas)
+      }).then(function (canvas) {
+        var result = document.querySelector("#result");
+        result.innerHTML = '';
+        result.appendChild(canvas);
       });
     }
   </script>
