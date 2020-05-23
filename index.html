@@ -20,7 +20,7 @@
   <header>
     <div class="logo">
       <a href="index.html">
-        <img src="logo2.png" class="logo" alt="ロゴ">
+        <img class="logo" src="logo2.png" class="logo" alt="ロゴ">
       </a>
     </div>
     <div class="info">
@@ -147,6 +147,19 @@
           </tr>
         </table>
       </form>
+      <div class="arrow">
+        <img src="arrow.gif" alt="右矢印" 　>
+        <img src="arrow.gif" alt="右矢印" 　>
+        <img src="arrow.gif" alt="右矢印" 　>
+        <img src="arrow.gif" alt="右矢印" 　>
+        <img src="arrow.gif" alt="右矢印" 　>
+        <img src="arrow.gif" alt="右矢印" 　>
+        <img src="arrow.gif" alt="右矢印" 　>
+        <img src="arrow.gif" alt="右矢印" 　>
+        <img src="arrow.gif" alt="右矢印" 　>
+        <img src="arrow.gif" alt="右矢印" 　>
+        <img src="arrow.gif" alt="右矢印" 　>
+      </div>
       <div class="table" id="facts">
         <div class="facts_title">Nutrition Facts</div>
         <div class="facts_serving_pre"><span id="perContainer1"></span> servings per container</div>
@@ -214,23 +227,18 @@
         </div>
       </div>
     </div>
-    <div class="result"><input type="button" value="画像出力" onclick="clickBtn1()" /></div>
+    <div class="btn">
+      <input type="button" value="表示" onclick=" clickBtn1()" />
+      <input type="button" value="消去" onclick=" clickBtn2()" /></div>
     <div class="result" id="result"> </div>
   </main>
   <footer>
-    <small> Copyright &copy; <a href="https://www.pochi.ml/DGT2/"> DGT group</a> All Rights Reserved.</small>
+    <small> powered by <a href="https://www.pochi.ml/DGT2/"> DGT group</a> </small>
+    <small> Source code available at <a href="https://github.com/katayamahide/katayamahide.github.io">GitHub</a></small>
   </footer>
 
 
   <script>
-    // const itemsJp = ["熱量", "総脂質", "飽和脂肪酸", "トランス脂肪酸", "コレステロール", "ナトリウム", "総炭水化物", "食物繊維", "総糖類", "添加糖類", "タンパク質", "ビタミンD", "カルシウム", "鉄分", "カリウム"];
-    // const itemsEn = ["Calories", "Total Fat", "Saturated Fat", "Trans Fat", "Cholesterol", "Sodium", "Total Carbonhydrate", "Dietary Fiber", "Total Sugars", "Added Sugars", "Protein", "Vitamin D", "Calcium", "Iron", "Potassium"];
-    // const itemsJpNumber = itemsJp.length;
-    // const item = document.getElementsByClassName("item");
-    // for( let i = 0; i < itemsJpNumber; i++){
-    //   item[i].innerHTML = itemsJp[i];
-    // }
-
     function goodman() {
       // パッケージ当たり食数 Servings per container
       // 値を取得
@@ -546,6 +554,15 @@
       document.getElementById("potassium1").textContent = valuePotassium;
       // %DVに出力
       document.getElementById("potassiumDV").textContent = valuePotassiumDV;
+    }
+
+    function clickBtn2() {
+      _delete_child_element('result');
+
+      function _delete_child_element(id_name) {
+        var dom_obj = document.getElementById(id_name);
+        while (dom_obj) dom_obj.removeChild(dom_obj.firstChild);
+      }
     }
   </script>
 

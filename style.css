@@ -1,4 +1,4 @@
-img {
+.logo {
     width: 240px;
     vertical-align: middle;
 }
@@ -20,14 +20,14 @@ header {
 }
 
 form {
-    margin: 0 20px 20px 0px;
+    margin: 0 0 20px 0px;
 }
 
 table {
     border-collapse: collapse;
     font-size: 9pt;
     line-height: 125%;
-    margin: 20px 20px;
+    margin: 20px 0px;
     border: solid 1px #999;
     text-align: left;
 
@@ -58,14 +58,25 @@ input[type="number"] {
     -moz-appearance: textfield;
 }
 
+.arrow {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
 
 .result {
     text-align: center;
 }
 
+.btn {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
 footer {
     margin-top: 30px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     height: 100px;
     background-color: white;
@@ -80,6 +91,7 @@ footer {
     height: 520px;
     margin-top: 20px;
     margin-right: 20px;
+    margin-left: 20px;
     background: #0000;
     border: 1px solid #000;
     padding: 20px 0px;
