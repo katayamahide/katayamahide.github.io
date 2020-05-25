@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html>
 
 <head>
   <meta charset="utf-8">
-  <title>ぽちっと栄養表示</title>
+  <title id="title"></title>
   <link rel="icon" href="favicon.ico">
-  <meta name="description" content="海外栄養表示の簡単作成ツールです。最新の米国FDA栄養表示ルールに対応。" />
+  <meta id="content" name="description" content="海外栄養表示の簡単作成ツールです。最新の米国FDA栄養表示ルールに対応。" />
   <link rel="stylesheet" href="style.css">
   <!-- Twitterカード -->
   <meta name="twitter:title" content="ぽちっと栄養表示" />
@@ -24,123 +24,126 @@
       </a>
     </div>
     <div class="info">
-      <p>米国FDA栄養表示の簡単作成ツール</p>
-    </div>
+      <p id="info"></p>
+    </div> <select id="select">
+      <option value="default">select language</option>
+      <option value="ja">日本語</option>
+      <option value="de">Deutsch</option>
+    </select>
   </header>
   <main>
     <div class="main_container">
       <form name="form">
         <table border="1px">
           <tr>
-            <th>パッケージ当たり食数</th>
+            <th id=spc></th>
             <th>Servings per container</th>
-            <td><input type="number" autofocus name="servingsPerContainer" size="5" maxlength="3" onKeyUp="goodman()">
+            <td><input type="number" name="servingsPerContainer" size="5" maxlength="3" onKeyUp="goodman()">
               servings</td>
           </tr>
           <tr>
-            <th>1食分の量(g)</th>
+            <th id=ss></th>
             <th>Serving size(g)</th>
             <td><input type="number" name="servingSize" value="" size="5" maxlength="5" onKeyUp="goodman()"> g
             </td>
           </tr>
           <tr>
-            <th>1食分の量(g以外)</th>
+            <th id=sso></th>
             <th>Serving size(Other than"g")
-            <td><input type="text" name="servingText" placeholder="任意(optional)" size="20" maxlength="20"
-                onKeyUp="goodman()">
+            <td><input type="text" name="servingText" size="20" maxlength="20" onKeyUp="goodman()">
             </td>
           </tr>
         </table>
         <table border="1px">
           <tr>
-            <th>栄養素</th>
+            <th id="nt"></th>
             <th>Nutrients</th>
-            <th>100g当たりの値</th>
+            <th></th>
           </tr>
           <tr>
-            <th>熱量</th>
+            <th id="cl"></th>
             <th>Calories</th>
             <td><input type="number" name="calories" value="" size="5" maxlength="5" onKeyUp="goodman()">
               kcal/100g</td>
           </tr>
           <tr>
-            <th>総脂質
+            <th id="tf"></th>
             <th>Total Fat</th>
             <td><input type="number" name="totalFat" value="" size="5" maxlength="5" onKeyUp="goodman()"> g/100g
             </td>
           </tr>
           <tr>
-            <th>飽和脂肪酸</th>
+            <th id="sf"></th>
             <th>saturated Fat</th>
             <td><input type="number" name="saturatedFat" value="" size="5" maxlength="5" onKeyUp="goodman()">
               g/100g</td>
           </tr>
           <tr>
-            <th>トランス脂肪酸</th>
+            <th id="tr"></th>
             <th>Trans Fat</th>
             <td><input type="number" name="transFat" value="" size="5" maxlength="5" onKeyUp="goodman()"> g/100g
             </td>
           </tr>
           <tr>
-            <th>コレステロール</th>
+            <th id="co"></th>
             <th>Cholesterol</th>
             <td><input type="number" name="cholesterol" value="" size="5" maxlength="5" onKeyUp="goodman()">
               mg/100g</td>
           </tr>
           <tr>
-            <th>ナトリウム</th>
+            <th id="so"></th>
             <th>Sodium</th>
             <td><input type="number" name="sodium" value="" size="5" maxlength="5" onKeyUp="goodman()"> mg/100g</td>
           </tr>
           <tr>
-            <th>総炭水化物</th>
+            <th id="tc"></th>
             <th>Total Carbonhydrate</th>
             <td><input type="number" name="totalCarbonhydrate" value="" size="5" maxlength="5" onKeyUp="goodman()">
               g/100g</td>
           </tr>
           <tr>
-            <th>食物繊維</th>
+            <th id=df></th>
             <th>Dietary Fiber</th>
             <td><input type="number" name="dietaryFiber" value="" size="5" maxlength="5" onKeyUp="goodman()">
               g/100g</td>
           </tr>
           <tr>
-            <th>総糖類</th>
+            <th id="ts"></th>
             <th>Total Sugars</th>
             <td><input type="number" name="totalSugars" value="" size="5" maxlength="5" onKeyUp="goodman()">
               g/100g</td>
           </tr>
           <tr>
-            <th>添加糖類</th>
+            <th id="as"></th>
             <th>Added Sugars</th>
             <td><input type="number" name="addedSugars" value="" size="5" maxlength="5" onKeyUp="goodman()">
               g/100g</td>
           </tr>
           <tr>
-            <th>タンパク質</th>
+            <th id="pr"></th>
             <th>Protein</th>
             <td><input type="number" name="protein" value="" size="5" maxlength="5" onKeyUp="goodman()"> g/100g
             </td>
           </tr>
           <tr>
-            <th>ビタミンD</th>
+            <th id="vd"></th>
             <th>Vitamin D</th>
             <td><input type="number" name="vitaminD" value="" size="5" maxlength="5" onKeyUp="goodman()"> mcg/100g
             </td>
           </tr>
           <tr>
-            <th>カルシウム</th>
+            <th id="ca"></th>
             <th>Calcium</th>
             <td><input type="number" name="calcium" value="" size="5" maxlength="5" onKeyUp="goodman()"> mg/100g
             </td>
           </tr>
           <tr>
-            <th>鉄分</th>
+            <th id="ir"></th>
             <th>Iron</th>
             <td><input type="number" name="iron" value="" size="5" maxlength="5" onKeyUp="goodman()"> mg/100g</td>
           </tr>
           <tr>
-            <th>カリウム</th>
+            <th id="po"></th>
             <th>Potassium</th>
             <td><input type="number" name="potassium" value="" size="5" maxlength="5" onKeyUp="goodman()">
               mg/100g</td>
@@ -228,8 +231,8 @@
       </div>
     </div>
     <div class="btn">
-      <input type="button" value="表示" onclick=" clickBtn1()" />
-      <input type="button" value="消去" onclick=" clickBtn2()" /></div>
+      <input id="display" type="button" onclick=" clickBtn1()" />
+      <input id="delete" type="button" onclick=" clickBtn2()" /></div>
     <div class="result" id="result"> </div>
   </main>
   <footer>
@@ -580,6 +583,7 @@
     }
   </script>
 
+  <script src="script.js"></script>
 </body>
 
 </html>
