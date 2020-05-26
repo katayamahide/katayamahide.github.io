@@ -3,8 +3,8 @@
     vertical-align: middle;
 }
 
-p {
-    margin: 10px 10px;
+select {
+    margin: 0px 10px;
 }
 
 header {
@@ -12,6 +12,11 @@ header {
     justify-content: center;
     align-items: center;
     text-align: center;
+}
+
+article {
+    display: flex;
+    justify-content: center;
 }
 
 .main_container {

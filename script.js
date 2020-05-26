@@ -137,81 +137,7 @@ const del = (x) => {
 }
 const selectLanguage = document.getElementById("select");
 
-selectLanguage.addEventListener("change", function () {
-    const index = this.selectedIndex;
-    const value = this[index].value;
-
-    if (value === "default") {
-
-    } else if (value === "ja") {
-        // ■Japanese
-        lang(wd.ja.lang);
-        title(wd.ja.title);
-        content(wd.ja.content);
-        info(wd.ja.info);
-        spc(wd.ja.spc);
-        ss(wd.ja.ss);
-        sso(wd.ja.sso);
-        nt(wd.ja.nt);
-        cl(wd.ja.cl);
-        tf(wd.ja.tf);
-        sf(wd.ja.sf);
-        tr(wd.ja.tr);
-        co(wd.ja.co);
-        so(wd.ja.so);
-        tc(wd.ja.tc);
-        df(wd.ja.df);
-        ts(wd.ja.ts);
-        as(wd.ja.as);
-        pr(wd.ja.pr);
-        vd(wd.ja.vd);
-        ca(wd.ja.ca);
-        ir(wd.ja.ir);
-        po(wd.ja.po);
-        display(wd.ja.display);
-        del(wd.ja.delete);
-
-    } else if (value === "de") {
-        // ■German
-        lang(wd.de.lang);
-        title(wd.de.title);
-        content(wd.de.content);
-        info(wd.de.info);
-        spc(wd.de.spc);
-        ss(wd.de.ss);
-        sso(wd.de.sso);
-        nt(wd.de.nt);
-        cl(wd.de.cl);
-        tf(wd.de.tf);
-        sf(wd.de.sf);
-        tr(wd.de.tr);
-        co(wd.de.co);
-        so(wd.de.so);
-        tc(wd.de.tc);
-        df(wd.de.df);
-        ts(wd.de.ts);
-        as(wd.de.as);
-        pr(wd.de.pr);
-        vd(wd.de.vd);
-        ca(wd.de.ca);
-        ir(wd.de.ir);
-        po(wd.de.po);
-        display(wd.de.display);
-        del(wd.de.delete);
-    }
-});
-
-function NavigatorGetLanguage() {
-    let navigator_obj = window.navigator;
-    if (navigator_obj.language !== undefined) return navigator_obj.language;
-    if (navigator_obj.browserLanguage !== undefined) return navigator_obj.browserLanguage;
-    if (navigator_obj.userLanguage !== undefined) return navigator_obj.userLanguage;
-    return "ja";
-}
-
-let language = NavigatorGetLanguage();
-if (language === "ja") {
-    // ■Japanese
+const ja = () => {
     lang(wd.ja.lang);
     title(wd.ja.title);
     content(wd.ja.content);
@@ -237,9 +163,9 @@ if (language === "ja") {
     po(wd.ja.po);
     display(wd.ja.display);
     del(wd.ja.delete);
+}
 
-} else {
-    // ■German
+const de = () => {
     lang(wd.de.lang);
     title(wd.de.title);
     content(wd.de.content);
@@ -265,6 +191,34 @@ if (language === "ja") {
     po(wd.de.po);
     display(wd.de.display);
     del(wd.de.delete);
+}
+
+selectLanguage.addEventListener("change", function () {
+    const index = this.selectedIndex;
+    const value = this[index].value;
+
+    if (value === "default") {
+
+    } else if (value === "ja") {
+        ja();
+    } else if (value === "de") {
+        de();
+    }
+});
+
+function NavigatorGetLanguage() {
+    let navigator_obj = window.navigator;
+    if (navigator_obj.language !== undefined) return navigator_obj.language;
+    if (navigator_obj.browserLanguage !== undefined) return navigator_obj.browserLanguage;
+    if (navigator_obj.userLanguage !== undefined) return navigator_obj.userLanguage;
+    return "ja";
+}
+
+let language = NavigatorGetLanguage();
+if (language === "ja") {
+    ja();
+} else {
+    de();
 }
 
 
