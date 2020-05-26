@@ -14,7 +14,8 @@ header {
     text-align: center;
 }
 
-article {
+.article {
+    margin: 10px 10px;
     display: flex;
     justify-content: center;
 }
@@ -102,7 +103,6 @@ footer {
     padding: 20px 0px;
     font-size: 15px;
     line-height: 15px;
-    box-shadow: 4px 10px 10px rgba(0, 0, 0, 0.2);
 }
 
 .facts_title {
